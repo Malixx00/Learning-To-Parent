@@ -1,0 +1,56 @@
+:root {
+  --bg: #fbf8f3; --card: #ffffff; --ink: #2a2a2a; --muted: #6b6b6b; --line: #e6dfd3;
+  --accent: #2f7d6d; --accent-ink: #ffffff; --good: #2f7d6d; --goodbg: #e6f3ef; --bad: #b3472f; --badbg: #fbece8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #17191a; --card: #212425; --ink: #ecebe8; --muted: #a2a09a; --line: #34383a;
+    --accent: #5cc0ab; --accent-ink: #0e1c19; --good: #7bd6c2; --goodbg: #1b3330; --bad: #e69580; --badbg: #3a2420; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--card); position: sticky; top: 0; z-index: 2; }
+.brand { font-weight: 700; color: var(--ink); text-decoration: none; }
+.brand span { font-weight: 400; color: var(--muted); font-size: 0.85em; }
+nav { display: flex; gap: 4px; }
+nav a { padding: 6px 12px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+nav a.on { background: var(--accent); color: var(--accent-ink); }
+main { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+footer { max-width: 760px; margin: 0 auto; padding: 0 16px 30px; color: var(--muted); font-size: 0.8em; }
+h1 { font-size: 1.5rem; margin: 0 0 4px; }
+h2 { font-size: 1.1rem; margin: 22px 0 6px; }
+.sub { color: var(--muted); margin: 0 0 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.tile { display: block; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+.tile:hover { border-color: var(--accent); }
+.tile .e { font-size: 1.6rem; }
+.tile b { display: block; margin-top: 4px; }
+.tile span { color: var(--muted); font-size: 0.9em; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 12px 0; }
+.card h2:first-child { margin-top: 0; }
+ul, ol { margin: 6px 0; padding-left: 22px; }
+li { margin: 4px 0; }
+.say li { color: var(--good); } .avoid li { color: var(--bad); }
+.say li, .avoid li { color: var(--ink); }
+.pill { display: inline-block; font-size: 0.8em; padding: 2px 10px; border-radius: 999px; background: var(--goodbg); color: var(--good); margin-right: 6px; }
+.pill.bad { background: var(--badbg); color: var(--bad); }
+.src { color: var(--muted); font-size: 0.85em; }
+.tip { background: var(--goodbg); border-radius: 10px; padding: 10px 14px; margin: 14px 0; }
+button, .btn { font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 10px; padding: 10px 14px; text-align: left; text-decoration: none; display: inline-block; }
+button.primary, .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); text-align: center; }
+.opts { display: grid; gap: 10px; margin: 14px 0; }
+.opts button { width: 100%; }
+.opts button.good { background: var(--goodbg); border-color: var(--good); }
+.opts button.bad { background: var(--badbg); border-color: var(--bad); }
+.opts button:disabled { cursor: default; opacity: 1; color: var(--ink); }
+.fb { display: block; margin-top: 6px; font-size: 0.9em; color: var(--muted); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.score { color: var(--muted); font-size: 0.9em; }
+select { font: inherit; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.stages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.stages a { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: var(--card); }
+.stages a.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.stages small { color: inherit; opacity: 0.75; }
+.warn { background: var(--badbg); border-radius: 10px; padding: 10px 14px; margin: 14px 0; }
+.lines li { margin: 6px 0; }
+.lines a { font-weight: 700; }

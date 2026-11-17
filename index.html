@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parenting Toolkit</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2f7d6d">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Parenting">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<header>
+  <a class="brand" href="#/">Parenting Toolkit <span id="age"></span></a>
+  <nav>
+    <a href="#/" data-nav="home">Topics</a>
+    <a href="#/practice" data-nav="practice">Practice</a>
+    <a href="#/today" data-nav="today">Today</a>
+    <a href="#/help" data-nav="help">Get help</a>
+  </nav>
+</header>
+<main id="app"></main>
+<footer>For personal use. Based on parenting books, research and podcast conversations; not medical or professional advice.</footer>
+<script src="content/situations.js"></script>
+<script src="content/kids-extra.js"></script>
+<script src="content/early-years.js"></script>
+<script src="content/teens.js"></script>
+<script src="content/young-adults.js"></script>
+<script src="app.js"></script>
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+</body>
+</html>
