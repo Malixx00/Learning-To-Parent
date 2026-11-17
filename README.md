@@ -3,6 +3,8 @@ An interface to learn how to parent at different stages. It's not vetted by prof
 
 Live app: https://malixx00.github.io/Learning-To-Parent/
 
+Professional review pack: [review/](review/), containing a plan for a midwife, nurse, GP, OT etc. to fact-check the app ([Professional Review Plan.md](review/Professional%20Review%20Plan.md)) and a workbook to log issues in ([Review Workbook.xlsx](review/Review%20Workbook.xlsx)). After changing content, rebuild the workbook with `python3 review/make_review_workbook.py`.
+
 ## Parenting Toolkit: PWA version
 
 This is the installable web app version of `../Parenting App`. Host it on GitHub Pages and friends can open the link on their phone, tap "Add to Home Screen" / "Install", and use it like an app, including offline.
